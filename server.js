@@ -4,7 +4,9 @@ const hbs = require('hbs');
 
 const fs = require('fs');
 
-
+//The following is to enable Heroku (The Node.js web server)
+// to set the prot # to the port it uses OR use 3000 for running locally
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -96,8 +98,8 @@ app.get('/bad', (req, res) => {
 });
 
 //Server running on port 3000 i.e loclhost:3000
-app.listen(3000, () => {
-  console.log('Server is up on port 3000')
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
 
 
