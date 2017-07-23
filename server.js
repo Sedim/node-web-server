@@ -71,13 +71,23 @@ app.get('/', (req, res) => {
     welcomeMessage: 'Welcome to my website',
     // currentYear: new Date().getFullYear()// Replaced by helper above
   });
-});
+}); 
 
 //Simple web page
 app.get('/about', (req, res) => {
   // res.send('<h1>About Page</h1>');
   res.render('about.hbs', {
     pageTitle: 'About Page',
+    // currentYear: new Date().getFullYear()
+  });
+});
+
+
+//Simple web page
+app.get('/projects', (req, res) => {
+  // res.send('<h1>About Page</h1>');
+  res.render('projects.hbs', {
+    pageTitle: 'Projects page Page',
     // currentYear: new Date().getFullYear()
   });
 });
